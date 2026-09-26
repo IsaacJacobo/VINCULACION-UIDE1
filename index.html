@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción Web y IA - UIDE & Fundación Esmeraldas</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Fondo neutro claro */
+            -webkit-tap-highlight-color: transparent; /* Mejora la experiencia táctil */
+        }
+        
+        /* Colores personalizados*/
+        :root {
+            --uide-blue: #0f172a; /* Navy Blue oscuro */
+            --uide-red: #7a0505; /* Crimson Red */
+        }
+
+        /* Animación para los mensajes del chat */
+        .chat-bubble-enter {
+            animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ocultar scrollbar en el chat para diseño más limpio en móviles */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-slate-800 pb-16 antialiased selection:bg-red-200 selection:text-red-900">
+
+    <header class="bg-[#0f172a] text-white pt-10 pb-8 px-5 rounded-b-[2.5rem] shadow-xl sticky top-0 z-20 border-b-4 border-[#b91c1c]">
+        <div class="max-w-md mx-auto flex flex-col items-center text-center">
+            <img src="https://www.uide.edu.ec/wp-content/uploads/2025/06/logo-uide.webp" alt="Logo Universidad Internacional del Ecuador" class="h-16 mb-2 rounded shadow-sm">
+            <span class="bg-[#b91c1c] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 shadow-sm">
+                Proyecto de Vinculación
+            </span>
+            <h1 class="text-3xl font-extrabold mb-2 leading-tight">La Web y la IA 🚀</h1>
+            <p class="text-slate-300 text-sm font-medium">Fundación Esmeraldas & UIDE</p>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 mt-6 space-y-6">
+
+        <section class="bg-[#b91c1c] text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+            <!-- Círculo decorativo de fondo -->
+            <div class="absolute -right-6 -top-6 w-24 h-24 bg-white opacity-10 rounded-full blur-xl"></div>
+            
+            <h2 class="text-2xl font-bold mb-3 flex items-center gap-2">
+                <span class="text-3xl">💡</span> La Gran Enseñanza
+            </h2>
+            <p class="text-red-50 text-base leading-relaxed font-medium">
+                La Inteligencia Artificial no es exclusiva de computadoras costosas. 
+                <strong class="text-white bg-red-800 px-1 rounded">Es una herramienta para todos</strong>. 
+                Hoy, con tu teléfono celular, tienes el poder de crear, aprender, potenciar tu negocio y resolver problemas al instante.
+            </p>
+        </section>
+
+        <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+            <h2 class="text-xl font-bold text-[#0f172a] mb-4 flex items-center gap-2">
+                <span class="text-2xl">🌐</span> Anatomía de la Web
+            </h2>
+            <p class="text-slate-600 text-sm mb-5">Esta aplicación web que estás tocando ahora mismo existe gracias a 3 lenguajes principales:</p>
+            
+            <div class="space-y-4">
+                <!-- HTML -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border-l-4 border-orange-500">
+                    <div class="bg-orange-100 p-2 rounded-lg text-orange-600 text-xl">🧱</div>
+                    <div>
+                        <strong class="block text-slate-800">HTML (Estructura)</strong>
+                        <p class="text-xs text-slate-500 mt-1">Son los ladrillos de la casa. Definen dónde van los textos y los botones de esta pantalla.</p>
+                    </div>
+                </div>
+                
+                <!-- CSS -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border-l-4 border-[#0f172a]">
+                    <div class="bg-blue-100 p-2 rounded-lg text-blue-600 text-xl">🎨</div>
+                    <div>
+                        <strong class="block text-[#0f172a]">CSS (Diseño)</strong>
+                        <p class="text-xs text-slate-500 mt-1">Es la pintura. Hace que veas los botones redondeados y los colores rojo y azul de la UIDE.</p>
+                    </div>
+                </div>
+                
+                <!-- JS -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border-l-4 border-yellow-400">
+                    <div class="bg-yellow-100 p-2 rounded-lg text-yellow-600 text-xl">⚡</div>
+                    <div>
+                        <strong class="block text-slate-800">JavaScript (Acción)</strong>
+                        <p class="text-xs text-slate-500 mt-1">Es la electricidad. Hace que la página reaccione y "piense" cuando tocas los botones del simulador de abajo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+            <h2 class="text-xl font-bold text-[#0f172a] mb-3 flex items-center gap-2">
+                <span class="text-2xl">📱</span> IA en tu Bolsillo
+            </h2>
+            <p class="text-slate-600 text-sm mb-4">Servicios gratuitos que puedes usar desde el navegador web de tu celular, sin instalar nada pesado:</p>
+            
+            <ul class="grid grid-cols-1 gap-3">
+                <li class="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-lg shadow-sm">✨</div>
+                    <div>
+                        <strong class="block text-slate-800 text-sm">Gemini (Google)</strong>
+                        <span class="text-xs text-slate-500">Excelente para redactar, resumir y buscar información actual.</span>
+                    </div>
+                </li>
+                <li class="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 bg-green-100 text-green-600 flex items-center justify-center rounded-full text-lg shadow-sm">💬</div>
+                    <div>
+                        <strong class="block text-slate-800 text-sm">ChatGPT (OpenAI)</strong>
+                        <span class="text-xs text-slate-500">Tu asistente personal para aprender nuevos temas o generar ideas.</span>
+                    </div>
+                </li>
+                <li class="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl hover:bg-slate-100 transition-colors">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 flex items-center justify-center rounded-full text-lg shadow-sm">🖼️</div>
+                    <div>
+                        <strong class="block text-slate-800 text-sm">Copilot (Microsoft)</strong>
+                        <span class="text-xs text-slate-500">Crea imágenes espectaculares solo describiéndolas con texto.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="bg-[#0f172a] p-6 rounded-3xl shadow-lg border-2 border-[#1e293b]">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <span class="text-2xl">🤖</span> Simulador IA
+                </h2>
+                <span class="text-[10px] bg-[#b91c1c] text-white px-2 py-1 rounded-md font-bold tracking-wide">PODER DEL JS ⚡</span>
+            </div>
+            
+            <p class="text-slate-400 text-xs mb-4">
+                Toca los botones. El código <strong>JavaScript (JS)</strong> de esta página escuchará tu toque y generará una respuesta simulada al instante.
+            </p>
+
+            <!-- Caja de chat -->
+            <div id="chat-box" class="bg-slate-50 border border-slate-300 rounded-2xl p-4 h-64 overflow-y-auto no-scrollbar mb-4 flex flex-col gap-4 shadow-inner">
+                <!-- Mensaje inicial del bot -->
+                <div class="flex justify-start chat-bubble-enter">
+                    <div class="bg-white border border-slate-200 text-slate-700 text-sm p-3 rounded-2xl rounded-tl-sm max-w-[85%] shadow-sm">
+                        ¡Hola, Fundación Esmeraldas! 👋 Soy una simulación interactiva. Toca una de las opciones abajo para ver cómo te ayudaría.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de preguntas predefinidas -->
+            <div class="grid grid-cols-1 gap-2">
+                <button onclick="handleUserAction('Dime una idea de negocio', '¡Claro! Qué tal vender <b>postres artesanales con ingredientes locales</b>. Puedes tomarles fotos con tu celular y usar IA para crear textos atractivos para WhatsApp o Facebook.')" 
+                        class="w-full text-left bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-4 rounded-xl transition-all active:scale-95 touch-manipulation border border-white/5 flex items-center justify-between">
+                    <span>💡 Dime una idea de negocio</span>
+                    <span class="text-slate-400 text-xs">Tocar</span>
+                </button>
+                <button onclick="handleUserAction('Genera un saludo', '¡Hola a todos! Qué gusto saludar a la comunidad de la Fundación Esmeraldas. Estoy aquí para ayudarles a aprovechar la tecnología de forma fácil y gratuita. 🌴✨')" 
+                        class="w-full text-left bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-4 rounded-xl transition-all active:scale-95 touch-manipulation border border-white/5 flex items-center justify-between">
+                    <span>👋 Genera un saludo</span>
+                    <span class="text-slate-400 text-xs">Tocar</span>
+                </button>
+                <button onclick="handleUserAction('¿Qué es el código JS?', 'El JavaScript (JS) es la electricidad de la web. Justo ahora, un código JS notó que tocaste el botón y dibujó esta cajita de texto en tu pantalla sin recargar la página. ¡Eso es interactividad! ⚡')" 
+                        class="w-full text-left bg-[#b91c1c]/80 hover:bg-[#b91c1c] text-white font-medium py-3 px-4 rounded-xl transition-all active:scale-95 touch-manipulation border border-[#b91c1c] flex items-center justify-between">
+                    <span>👨‍💻 ¿Qué es el código JS?</span>
+                    <span class="text-red-200 text-xs">Tocar</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-slate-500 text-xs mt-10 mb-6 font-medium">
+        <p class="mt-1">2026 UIDE GRUPO 1</p>
+    </footer>
+
+    <script>
+        // Prevenir toques múltiples rápidos
+        let isSimulating = false;
+
+        function handleUserAction(questionText, answerText) {
+            if (isSimulating) return;
+            isSimulating = true;
+            
+            const chatBox = document.getElementById('chat-box');
+
+            // 1. Crear y mostrar el mensaje del usuario (Derecha, color rojo UIDE)
+            const userMsgContainer = document.createElement('div');
+            userMsgContainer.className = 'flex justify-end chat-bubble-enter';
+            
+            const userBubble = document.createElement('div');
+            userBubble.className = 'bg-[#b91c1c] text-white text-sm p-3 rounded-2xl rounded-tr-sm max-w-[85%] shadow-md';
+            userBubble.innerText = questionText;
+            
+            userMsgContainer.appendChild(userBubble);
+            chatBox.appendChild(userMsgContainer);
+            
+            // Auto-scroll al final del chat
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // 2. Simular el tiempo que la IA "piensa" usando setTimeout (JS Asíncrono)
+            setTimeout(() => {
+                // Crear y mostrar la respuesta de la "IA" (Izquierda, blanco)
+                const botMsgContainer = document.createElement('div');
+                botMsgContainer.className = 'flex justify-start chat-bubble-enter';
+                
+                const botBubble = document.createElement('div');
+                botBubble.className = 'bg-white border border-slate-200 text-slate-800 text-sm p-3 rounded-2xl rounded-tl-sm max-w-[85%] shadow-sm leading-relaxed';
+                botBubble.innerHTML = answerText; // negritas 
+                
+                botMsgContainer.appendChild(botBubble);
+                chatBox.appendChild(botMsgContainer);
+                
+                // Auto-scroll al final nuevamente
+                chatBox.scrollTop = chatBox.scrollHeight;
+                
+                // Habilitar botones de nuevo
+                isSimulating = false;
+            }, 1000); // Retraso de 1 segundo para que sea mas real 
+        }
+    </script>
+</body>
+</html>
